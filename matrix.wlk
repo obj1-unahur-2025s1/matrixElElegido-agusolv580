@@ -10,7 +10,10 @@ object nave{
         pasajeros.forEach({p => p.saltar()})
         pasajeros.clear()
     }
-    method acelerar() = pasajeros.filter({p => p.esElElegido()})
+    method acelerar(){
+        const pasajerosSinElElegido = pasajeros.filter({p => !p.esElElegido()})
+        pasajerosSinElElegido.forEach({p => p.saltar()})
+    }
 }
 
 object neo{
